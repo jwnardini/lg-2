@@ -1,0 +1,44 @@
+#ui{
+
+    h2{
+        font-size:17px;
+        line-height:19px;
+    }
+
+    h3 {
+        top:110px;
+        //-webkit-transform: translateX(-50%) scale(0.8);
+        //-ms-transform: translateX(-50%) scale(0.8);
+        //transform: translateX(-50%) scale(0.8);
+
+        span{
+            font-size:14px;
+        }
+    }
+
+    #dotsRoot{
+
+        .dot{
+            width:120px;
+
+            span{
+
+                &:before{
+                    height:30px;
+                }
+            }
+        }
+    }
+
+    #globeText{
+        -webkit-transform: translate(-50%, -50%) scale(0.8);
+        -ms-transform: translate(-50%, -50%) scale(0.8);
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+
+}
+
+#footerBar{
+	bottom:3%;
+}

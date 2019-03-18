@@ -1,0 +1,80 @@
+.nav-links {
+	display: block;
+
+	a,
+	span {
+		color: $white;
+		background-color: $brand-blue;
+		padding: 1rem 1.5rem;
+		font-size: 1.8rem;
+		font-weight: $font-bold;
+		text-transform: uppercase;
+
+		&.dots { 
+			color: $black;
+			background: none;
+		}
+
+		&.current {
+			color: $black;
+			background-color: $brand-yellow;
+		}
+	}
+
+	.nav-next, .nav-previous {
+		float: left;
+	}
+
+	.nav-previous {
+		margin-right: 1rem;
+	}
+}
+
+.products-pager {
+	padding-bottom: 5rem;
+
+	@include breakpoint($phablet) {
+		//padding-bottom: 0;
+	}
+}
+
+.facetwp-pager {
+
+	.facetwp-pager-label {
+		display: block;
+		padding: 1rem 0;
+		font-size: 1.8rem;
+	}
+
+
+	text-align: center;
+	
+	a {
+		color: $white;
+		background-color: $brand-blue;
+		padding: 1rem 1.5rem;
+		font-size: 1.3rem;
+		font-weight: $font-bold;
+		text-transform: uppercase;
+
+		@include breakpoint($iphone-six) {
+			font-size: 1.8rem;
+		}
+
+		&.dots { 
+			color: $black;
+			background: none;
+		}
+
+		&.active {
+			color: $black;
+			background-color: $brand-yellow;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+
+}

@@ -1,0 +1,71 @@
+body {
+	&.page-template-our-services {
+
+		.content {
+			margin-bottom: 5rem;
+		}
+
+		.manufacturers-list {
+			margin: 5rem 0;
+			overflow: hidden;
+
+			&:after {
+				content: " ";
+				display: block;
+				clear: both;
+			}
+
+			.grid {
+
+				@include breakpoint($vga){
+					display: flex;
+					flex-wrap: wrap;
+				}
+			}
+
+			p {
+				line-height: 2.4rem;
+				padding-right: 1.5rem;
+
+				@include breakpoint($vga){
+					float: left;
+					flex: 0 0 50%;
+				}
+
+				@include breakpoint($wxga){
+					flex: 0 0 33.3%;
+				}
+			}
+		}
+
+		.manufacturer,
+		.distributor {
+			margin-bottom: 5rem;
+
+			@include breakpoint($phablet){
+				padding-left: 27rem;
+				position: relative;
+			}
+
+			img {
+
+				max-width: 20rem;
+				display: block;
+				margin: auto;
+
+				@include breakpoint($phablet){
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+
+		.distributors-list {
+
+			margin-bottom: 10rem;
+
+		}
+	}
+}

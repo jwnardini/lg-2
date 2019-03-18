@@ -1,0 +1,225 @@
+.bsk-pdfm-error{
+    color: #FF0000;
+}
+
+.bsk-pdf-documentation-attr{
+    color: #ff5b00;
+}
+
+.bsk-pro-tips-box {
+    font-size: 12px;
+    border: 1px solid #00abff;
+    display: block;
+    padding: 5px;
+	margin: 10px 0 10px 0;
+    background: #e5f3f9;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bsk-pro-tips-box a{
+	text-decoration:none;
+	color:#ff5b00;
+	padding-left:10px;
+}
+
+/*
+  * Settings
+  */
+#bsk_pdfm_setings_tab_content_wrap_ID,
+#bsk_pdfm_help_tab_content_wrap_ID{
+	padding:22px;
+	background: #fff;
+	border:1px solid #ccc;
+	border-top:0px;
+}
+
+#bsk_pdfm_setings_tab_content_wrap_ID section,
+#bsk_pdfm_help_tab_content_wrap_ID section{
+	display: none;
+}
+
+#bsk_pdfm_setings_tab_content_wrap_ID section:first-child,
+#bsk_pdfm_help_tab_content_wrap_ID setion:first-child{
+	display: block;
+}
+
+.no-js h2.nav-tab-wrapper {
+	display:none;
+}
+
+.no-js #bsk_pdfm_setings_tab_content_wrap_ID,
+.no-js #bsk_pdfm_help_tab_content_wrap_ID{
+	border-top:1px solid #ccc;
+	margin-top:22px;
+}
+
+.no-js #bsk_pdfm_setings_tab_content_wrap_ID section,
+.no-js #bsk_pdfm_help_tab_content_wrap_ID section{
+	border-top: 1px dashed #aaa;
+	margin-top:22px;
+	padding-top:22px;
+}
+
+.no-js #bsk_pdfm_setings_tab_content_wrap_ID section:first-child,
+.no-js #bsk_pdfm_help_tab_content_wrap_ID section:first-child{
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+
+.bsk-pdfm-supported-extension label{
+    display: inline-block;
+    width: 100px;
+}
+/*
+  * pdf list
+  */
+.bsk_pdfm_pdf_order{
+	width: 60px;
+	margin-right: 20px;
+}
+
+#bsk-pdf-manager-pdfs-form-id .column-id{
+	width:6%;
+}
+#bsk-pdf-manager-pdfs-form-id .column-title{
+	width:15%;
+}
+#bsk-pdf-manager-pdfs-form-id .column-file_name{
+	width:23%;
+}
+#bsk-pdf-manager-pdfs-form-id .column-description{
+	width:15%;
+}
+#bsk-pdf-manager-pdfs-form-id .column-category{
+	width:15%;
+}
+#bsk-pdf-manager-pdfs-form-id .column-order{
+	width:8%;
+}
+#bsk-pdf-manager-pdfs-form-id .column-last_date{
+	width:10%;
+}
+#bsk-pdf-manager-pdfs-form-id .column-download_count{
+	width:8%;
+}
+
+.bsk-pdfm-pdf-list-horizal-line{
+    border: none;
+    border-top: 1px dotted #5C5C5C;
+    color: #5C5C5C;
+    background-color: #FFFFFF;
+    height: 1px;
+    width: 100%;
+}
+
+.bks-pdf-manager-left-half-div,
+.bks-pdf-manager-right-half-div{
+	width:49%;
+	float:left;
+}
+
+.bsk-pdfm-field-label{
+	display:inline-block;
+	width:20%;
+}
+
+.bsk-pdf-field{
+	display:inline-block;
+	width:75%;
+}
+
+/*
+* Categories list
+*/
+#bsk_pdf_manager_categories_form_id .column-id{
+    width: 6%;
+}
+#bsk_pdf_manager_categories_form_id .column-title{
+    width: 30%;
+}
+#bsk_pdf_manager_categories_form_id .column-description{
+    width: 30%;
+}
+#bsk_pdf_manager_categories_form_id .column-password{
+    width: 10%;
+}
+#bsk_pdf_manager_categories_form_id .column-last_date{
+    width: 10%;
+}
+#bsk_pdf_manager_categories_form_id .column-count{
+    width: 10%;
+}
+#bsk_pdfm_category_container_ID span,
+#bsk_pdfm_php_uploader_container_ID span,
+#bsk_pdfm_wordpress_uploader_label_ID,
+#bsk_pdfm_featured_image_uploader_label_ID{
+	display:block;
+	float:left;
+	width:20%;
+}
+
+#bsk_pdfm_category_container_ID div,
+#bsk_pdfm_php_uploader_container_ID div,
+#bsk_pdfm_wordpress_uploader_ID,
+#bsk_pdfm_featured_image_uploader_ID{
+	display:block;
+	width:75%;
+	float:left;
+}
+
+
+
+/* for Categoty edit / add new */
+.bsk_pdf_manager_category_edit span{
+	display: inline-block;
+	width: 13%;
+}
+
+.bsk_pdf_manager_category_edit input[type=text]{
+	width: 30%;
+}
+
+.bsk_pdf_manager_category_edit textarea{
+	width: 30%;
+	height: 150px;
+}
+
+/* for cateogries hierarchy */
+.bsk-pdfm-category-hierarchy-checkbox-container li ul{
+    margin-left: 20px;
+}
+
+/* for Widget */
+.bsk-pdfm-category-dropdown-container select{
+    max-width: 100%;
+}
+
+
+/* for othe product */
+.bsk-prdoucts-single{
+	width: 90%;
+	padding: 10px;
+	-webkit-box-shadow:  -1px 1px 6px -1px rgba(0, 0, 0, 0.5);
+	box-shadow:  -1px 1px 6px -1px rgba(0, 0, 0, 0.5);
+	background:#FFFFFF;
+	overflow: hidden;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	margin-left: 4%;
+}
+
+.bsk-prdoucts-single-first{
+	margin-left: 0px;
+}
+
+.bsk-prdoucts-single h3,
+.bsk-prdoucts-single-center{
+	text-align:center;
+}
+
+.bsk-prdoucts-single-link-button{
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}

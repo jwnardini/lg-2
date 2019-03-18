@@ -1,0 +1,210 @@
+$fakerow: 30rem;
+
+.single-product {
+
+	.main {
+		float: none;
+		width: 100%;
+		padding: 0; margin: 0 auto;
+	}
+
+	.sidebar, .breadcrumbs {
+		display: none;
+	}
+
+	article {
+
+		@include breakpoint( $ipad ) {
+			.col-sm-8 {
+				float: right;
+			}
+
+			.col-sm-4 {
+				padding-top: $fakerow;
+			}
+		}
+
+		header {
+			padding: $gutter*2 0;
+			text-align: center;
+			border-bottom: 1px solid $lgrey;
+
+			@include breakpoint( $ipad ) {
+				min-height: $fakerow/2;
+
+				text-align: left;
+
+				h1 {
+					margin: 0;
+					font-size: 5.4rem;
+					font-weight: 700;
+					padding-bottom: 3.3rem;
+				}
+
+				p {
+					font-size: 2.1rem;
+					text-transform: none;
+					color: inherit;
+					font-weight: normal;
+					margin: 0 0 1rem 0;
+
+					strong {
+						font-weight: 700;
+					}
+				}
+
+				.featured-image {
+					position: absolute;
+					width: 50%;
+					left: -50%;
+
+					text-align: center;
+
+					img {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+
+		.entry-content {
+			min-height: 20rem;
+			padding: $gutter*2 0;
+
+			p {
+				@include selfclear();
+			}
+		}
+
+		.additional-information {
+
+			padding: $gutter 0;
+
+			h2 {
+				padding: $gutter; margin: 0;
+				font-size: 1.8rem;
+				font-weight: 900;
+				background: $brand-yellow;
+				text-transform: uppercase;
+				color: $black;
+			}
+			ul {
+				padding: 0; margin: 0 0 2rem 0;
+				list-style: none;
+
+				li {
+
+					font-size: 1.8rem;
+					margin: 0;
+					color: inherit;
+
+					&:nth-of-type(odd) {
+						background: $offwhite;
+					}
+
+					strong, span {
+						display: block;
+						padding: $gutter;
+
+						@include breakpoint( $phablet ) {
+							display: inline-block;
+							width: 50%;
+						}
+					}
+
+					strong {
+						text-transform: capitalize;
+					}
+
+					span {
+						@include breakpoint( $phablet ) {
+							border-left: 1px solid $lgrey;
+						}
+					}
+				}
+			}
+
+			p {
+				font-size: 1.8rem;
+			}
+		}
+
+		section.pdf-downloads {
+
+			h1 {
+				position: relative;
+				padding: $gutter 0 $gutter $gutter*3;
+				border-bottom: 1px solid $lgrey;
+				font-size: 1.8rem;
+				line-height: 2.8rem;
+				color: $brand-blue;
+				font-weight: $font-bold;
+				text-transform: uppercase;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 2rem;
+					left: 1.5rem; 
+					top: 2rem;
+					bottom: 0;
+					background-image: url('../../dist/images/pdf-icon.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+
+			}
+
+			h2 {
+				position: relative;
+				padding: 0;
+				font: {
+					size: 1.8rem;
+					weight: $font-bold;
+				}
+				text-transform: uppercase;
+
+				&:nth-of-type(n+2) {
+					padding: 3rem 0 0; margin-top: 2rem;
+
+					&:before {
+						content:'';
+						display: block; position: absolute;
+						left: 0; top: 0;
+						width: 6rem; height: .4rem;
+						background: $brand-yellow;
+					}
+				}
+			}
+
+			ul {
+
+				padding: 1rem 0;
+				list-style: none;
+
+				li {
+
+					padding: 5px 0; margin: 0;
+					
+					a {
+						display: block; position: relative;
+						padding: $gutter $gutter $gutter $gutter*3;
+						color: $brand-blue;
+						text-transform: uppercase;
+						background: $offwhite;
+
+						@include icon( $icon-download );
+						
+						&:before {
+							top: .9rem;
+						}
+
+
+					}
+
+				}
+			}
+
+		}
+	}
+}

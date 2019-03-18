@@ -1,0 +1,48 @@
+body {
+	&.blog, &.single-post {
+	
+		main.main {
+			padding: 0 $gutter;
+			max-width: 100%;
+
+			@include breakpoint($ipad){
+				max-width: 128rem;
+				margin: auto;
+				float: none;
+			}
+
+			article {
+
+				.thumbnail {
+					display: none;
+				
+					@include breakpoint($xga){
+						display: block;
+					}
+
+				}
+
+				.article-content {
+					padding-left: 0;
+					padding-right: 0;
+					@include breakpoint($xga){
+						padding-left: 1.5rem;
+						padding-right: 1.5rem;
+					}
+				}
+
+				.entry-content {
+					img {
+						display: none;
+
+						@include breakpoint($ipad){
+							display: block;
+						}
+					}
+				}
+			}
+			
+		}
+
+	}
+}

@@ -1,0 +1,133 @@
+@import "header/nav";
+@import "header/search";
+
+.callout {
+	background-color: $brand-yellow;
+	text-align: center;
+	font-size: 18px;
+	color: black;
+}
+
+header {
+	.status {
+		display: block;
+		width: 100%; height: 5px;
+		background: $brand-yellow;
+	}
+
+	a.brand {
+		display: block; position: relative;
+		width: 290px; height: 200px;
+		margin: 2rem auto;
+		text-indent: -9999px;
+		background: url( '../../dist/images/mobile-header-color.png') no-repeat;
+		background-size: contain;
+
+		@include breakpoint( $vga ) {
+			width: 100%; 
+			max-width: 600px; 
+			height: 120px;
+			margin: 20px auto;
+			background: {
+				size: 200%;
+				position: left center;
+				image: url('../../dist/images/logo.png');
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+		@include breakpoint( $ipad ) {
+			margin: 0;
+		}
+
+		@include breakpoint( $xga ) {
+			background: {
+				// size: 200%;
+				// position: -44px center;
+				//image: url('../../dist/images/lg-logo_white.png');
+			}
+		}
+	}
+
+	.controls {
+		@include selfclear();
+
+		@include breakpoint( $ipad ) {
+			padding-top: 4rem;
+			background: none;
+		}
+
+		@include breakpoint( $xga ) {
+			padding-top: 2.5rem;
+		}
+
+
+		padding: 5px 0;
+		background: $brand-blue;
+
+		.menu-toggle {
+
+			display: block; position: relative; float: right;
+			width: 20%; height: 40px;
+			padding: 5px 0 0 0; margin: 0;
+			border-radius: 6px;
+			cursor: pointer;
+
+			@include breakpoint( $xga ) {
+				display: none;
+			}
+
+			b {
+				display: block; position: relative;
+				width: 100%; max-width: 30px; height: 2px;
+				margin: 6px auto;
+				border-radius: 1px;
+				background: $white;
+
+				@include breakpoint( $ipad ) {
+					max-width: 25px;
+					//background: $brand-blue;
+				}
+			}
+		}
+
+		.chinese-page {
+			display: none; 
+			float: right;
+			width: 22rem; 
+			height: 30px;
+			padding: 0;
+			vertical-align: top;
+			text-align: left;
+
+			@include breakpoint( $xga ) {
+				display: block;
+			}
+
+			a {
+				color: $white;
+			}
+		}
+	}
+
+}
+
+body.home {
+	header{
+		a.brand {
+			background-image: url('../../dist/images/mobile-header-color.png');
+			background-position: center;
+			background-size: contain;
+
+			@include breakpoint( $ipad ) {
+				background-image: url('../../dist/images/logo.png');
+				background-position: right center;
+				background-size: 200%;
+				
+			}
+		}
+	}
+}

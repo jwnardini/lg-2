@@ -1,0 +1,30 @@
+#intro #swipe {
+    font-size:20px;
+}
+
+#ui{
+    #icons {
+        //width: calc(100% - 400px);
+		//width:400px;
+    }
+
+    h3{
+    //    height:180px;
+    }
+
+    #dotsRoot{
+
+        .dot{
+            width:220px;
+
+            span{
+
+                &:before{
+                    height:30px;
+                }
+            }
+        }
+    }
+
+
+}

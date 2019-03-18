@@ -1,0 +1,266 @@
+body.openNav {
+
+	.controls {
+
+		.menu-toggle {
+
+			b {
+				position: absolute;
+				right: 15px; top: 13px;
+
+				&:nth-of-type(1) {
+					transform: rotate(-45deg);
+				}
+				&:nth-of-type(2) {
+					transform: rotate(45deg);
+				}
+				&:nth-of-type(3) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	nav.nav-primary {
+		height: auto;
+	}
+}
+
+body.single-product .menu-item-type-post_type_archive.menu-item-object-product,
+body.single-publication .menu-item-type-post_type_archive.menu-item-object-publication {
+	@include currentNav();
+}
+
+nav.nav-primary {
+	height: 0;
+	overflow: hidden;
+
+	background: #363636;
+
+	@include breakpoint($xga) {
+		background-color: transparent;
+	}
+
+	ul.nav {
+
+		@include breakpoint( $xga ) {
+			display: flex;
+			justify-content: center;
+		}
+
+		li a {
+			color: #d7d7d7;
+			@include breakpoint( $xga ) {
+				color:$brand-blue;
+				.home & {
+					color:$white;
+				}
+			}
+		}
+
+		& > li {
+			border-bottom: 1px solid #3e3e3e;
+
+			&:first-of-type { border-top: none; }
+		}
+
+		& > li.menu-item-has-children {
+
+			position: relative;
+			cursor: pointer;
+
+			&:before {
+				content: '';
+				display: block; position: absolute;
+				right: 2.8rem; top: 2rem;
+				width: .2rem; height: 1.2rem;
+				background: $white;
+			}
+
+			&:after {
+				content: '';
+				display: block; position: absolute;
+				right: 2.3rem; top: 2.5rem;
+				width: 1.2rem; height: .2rem;
+				background: $white;
+			}
+
+			& > a {
+				width: 80%;
+			}
+
+			& > ul.sub-menu {
+
+				height: 0;
+				padding-left: $gutter*2;
+				background: $brand-yellow;
+				overflow: hidden;
+				li {
+					background: transparent;
+
+					a {
+						text-transform: capitalize;
+						color: #000;
+
+						&:hover {
+							text-decoration: underline;
+							@media (max-width: $screen-md-min) {
+								color: $white;
+							}
+						}
+					}
+				}
+
+				ul.sub-menu { display: none; }
+
+			}
+
+			@media (max-width: $screen-md-min) {
+				& > ul.sub-menu {
+					background: #363636;
+					.menu-item a {
+						color: #d7d7d7;
+					}
+				}
+			}
+
+			&.open {
+
+				&:before { display: none; }
+
+				& > ul.sub-menu {
+					height: auto;
+				}
+			}
+		}
+
+	}
+
+	@include breakpoint( $xga ) {
+		height: auto;
+		overflow: visible;
+
+		ul.nav {
+			& > li {
+				float: left;
+				border-top: none;
+
+				ul.sub-menu { display: none; }
+
+				&:before,
+				&:after {
+					display: none !important;
+				}
+
+				a { width: 100% !important; }
+
+				&:hover,
+				&.hover {
+					& > ul.sub-menu {
+						display: block; position: absolute; z-index: 1000;
+						height: auto;
+						padding: 1.5rem 0 !important;
+
+						li {
+							float: none;
+
+							&:first-of-type a {
+								margin-left: 0;
+							}
+
+							a {
+								padding: 1rem 2.1rem;
+
+								&:before {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+
+				&:nth-of-type(n+5):hover {
+					ul.sub-menu {
+						// right: 0;
+					}
+				}
+
+			}
+
+			li.current-menu-item,
+			li.current-page-parent {
+
+				@include currentNav();
+			}
+		}
+
+
+	}
+
+	ul.nav {
+		// margin: 0 -15px;
+
+		ul {
+
+			padding: 0;
+			list-style: none;
+			background: $brand-black;
+
+			a {
+				min-width: 30rem;
+			}
+		}
+
+		& > li {
+			display: block;
+
+			&:hover > a,
+			&:hover a:hover {
+				color: $white;
+				background-color: transparent;
+				text-decoration: none;
+
+				// &:before {
+				// 	content: '';
+				// 	display: block; position: absolute;
+				// 	left: 0; right: 0; top: 0;
+				// 	height: 3px;
+				// 	background: $brand-yellow;
+				// }
+			}
+
+			a {
+				display: block; position: relative;
+				padding: 1.5rem;
+
+				cursor: pointer;
+
+				font: {
+					size: 1.6rem;
+				}
+
+				text-transform: uppercase;
+				background: transparent;
+
+				&:focus {
+					background: $focus-blue;
+				}
+
+				@include breakpoint( $xga ) {
+					padding: 2.1rem 1.5rem;
+					font-size: 1.3rem;
+				}
+
+				@include breakpoint( $wxga ) {
+					padding: 2.5rem 1.5rem;
+					font-size: 1.5rem;
+
+					@-moz-document url-prefix() {
+						padding: 1.5rem 2.45rem;
+					}
+				}
+			}
+		}
+	}
+
+}

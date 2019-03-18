@@ -1,0 +1,90 @@
+body.home {
+	.main {
+		padding: 0;
+	}
+}
+
+.main {
+		
+		padding: 0 1rem;
+
+		@include breakpoint($phablet){
+			padding: 0 1.5rem 2.5rem 1.5rem;
+		}
+
+		img {
+			display: block;
+		}
+}
+
+.breadcrumbs {
+	padding: 2.4rem 0;
+	margin-bottom: 1.6rem;
+
+	a {
+		color: $brand-blue;
+	}
+}
+
+aside.related-resources {
+
+	border-top: .8rem solid $brand-yellow;
+
+	h2 {
+		padding: 2rem 0;
+		font-size: 2.6rem;
+		line-height: 3.2rem;
+		color: $black;
+		text-transform: uppercase;
+		font-weight: $font-bold;
+	}
+
+	ul {
+
+		padding: 0;
+		list-style: none;
+
+		@include selfclear();
+
+		li {
+			float: left;
+			width: 100%; min-height: 40rem;
+
+			@include breakpoint( $phablet ) {
+				width: 50%;
+			}
+
+			@include breakpoint( $xga ) {
+				width: 33%;
+			}
+
+			a {
+				text-align: left;
+				
+				img {
+					display: block;
+					height: auto;
+					margin: 0;
+					outline: 1px solid $lgrey;
+
+					&.none {
+						height: 30rem;
+						outline: none;
+						background: $lgrey;
+					}
+				}
+
+				span {
+					display: block;
+					width: 80%;
+					padding: 1rem 0;
+					font-size: 1.8rem;
+					font-weight: $font-bold;
+					text-align: left;
+				}
+			}
+		}
+
+	}
+
+}

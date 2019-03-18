@@ -1,0 +1,23 @@
+========================================
+BugMeBar by PluginHero
+http://pluginhero.com/portfolio/bugmebar
+=========================================
+
+CHANGELOG
+---------
+
+v1.0.5 - ?????
+
+v1.0.4 - 20th November 2014
+---------------------------
+
+* Hotfix for problem with MinimumWidth causing bar to not display on some installations (default value missing)
+
+v1.0.4 - 24th October 2014
+------------------------
+
+* Added 'Disable BugMeBar?' to options, to allow the bar to NOT show while the plugin is still activated
+* Added 'Homepage Only?' to options, to allow the bar to only be shown on the homepage (is_home()==TRUE)
+* Added 'Excluded Categories' and 'Excluded Posts' allowing user to specify a comma separated list of Ids which should not show BugMeBar
+* Tested plugin on WordPress v4
+* Added a minimum width option, which allows you to hide BMB under a certain width (set to 0 to disable). This is an imperfect solution as some devices (e.g. retina) report double-width and we are considering if there is a better way to handle responsive visibility

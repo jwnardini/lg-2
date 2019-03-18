@@ -1,0 +1,222 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BugMeBar\n"
+"POT-Creation-Date: 2014-09-01 16:08-0000\n"
+"PO-Revision-Date: 2014-09-01 16:08-0000\n"
+"Last-Translator: MeanThemes <themes@meanthemes.com>\n"
+"Language-Team: PluginHero <hello@pluginhero.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../bugmebar.php:64
+msgid "The Settings"
+msgstr ""
+
+#: ../bugmebar.php:81
+msgid "Disabled"
+msgstr ""
+
+#: ../bugmebar.php:82
+msgid "Disable BugMeBar?"
+msgstr ""
+
+#: ../bugmebar.php:88
+msgid "Homepage Only"
+msgstr ""
+
+#: ../bugmebar.php:89
+msgid "Only show BMB on the Homepage!"
+msgstr ""
+
+#: ../bugmebar.php:95
+msgid "Target"
+msgstr ""
+
+#: ../bugmebar.php:96
+msgid "Enter your target in here e.g. body or header .element or #element"
+msgstr ""
+
+#: ../bugmebar.php:102
+msgid "Message"
+msgstr ""
+
+#: ../bugmebar.php:103
+msgid ""
+"HTML will work in here too, but do not use double quotes, only single quotes "
+"e.g. ' not \" :). If you have to use them use an escape character first e.g. "
+"\"Quote\" would be \\\"Quote\\\""
+msgstr ""
+
+#: ../bugmebar.php:109
+msgid "Message Font size"
+msgstr ""
+
+#: ../bugmebar.php:110
+msgid ""
+"You can pixels, ems, rems, pts in here. Just enter your value and unit and "
+"you're good to go e.g. 17px"
+msgstr ""
+
+#: ../bugmebar.php:116
+msgid "Use your website's font"
+msgstr ""
+
+#: ../bugmebar.php:117
+msgid ""
+"By default we use Helvetica as it is bold and stands out, choose \"Yes\" to "
+"use your current web font instead."
+msgstr ""
+
+#: ../bugmebar.php:127
+msgid "Message Colour"
+msgstr ""
+
+#: ../bugmebar.php:134
+msgid "Message Link Colour"
+msgstr ""
+
+#: ../bugmebar.php:141
+msgid "Message Link Hover Colour"
+msgstr ""
+
+#: ../bugmebar.php:148
+msgid "Align message"
+msgstr ""
+
+#: ../bugmebar.php:160
+msgid "Show or Hide close button"
+msgstr ""
+
+#: ../bugmebar.php:171
+msgid "Close Text"
+msgstr ""
+
+#: ../bugmebar.php:172
+msgid "Enter the text you want for the close button e.g. X"
+msgstr ""
+
+#: ../bugmebar.php:178
+msgid "Close Colour"
+msgstr ""
+
+#: ../bugmebar.php:185
+msgid "Close Hover Colour"
+msgstr ""
+
+#: ../bugmebar.php:192
+msgid "Align Close button"
+msgstr ""
+
+#: ../bugmebar.php:203
+msgid "Close button, distance from the right (when right aligned)"
+msgstr ""
+
+#: ../bugmebar.php:210
+msgid "Close button, distance from the left (when left aligned)"
+msgstr ""
+
+#: ../bugmebar.php:217
+msgid "Remember closing with a Cookie?"
+msgstr ""
+
+#: ../bugmebar.php:218
+msgid ""
+"This will add a cookie to the user's browser so that computer doesn't load "
+"it on each page"
+msgstr ""
+
+#: ../bugmebar.php:228
+msgid "Cookie expires in"
+msgstr ""
+
+#: ../bugmebar.php:229
+msgid "This is in days"
+msgstr ""
+
+#: ../bugmebar.php:235
+msgid "Name your cookie"
+msgstr ""
+
+#: ../bugmebar.php:236
+msgid "Entering a different name will mean cookie bar reappears for everyone"
+msgstr ""
+
+#: ../bugmebar.php:242
+msgid "Show transitioning colours"
+msgstr ""
+
+#: ../bugmebar.php:243 ../bugmebar.php:254
+msgid "This is for CSS3 browsers only"
+msgstr ""
+
+#: ../bugmebar.php:253
+msgid "Bounce in/out Animation in on open and close"
+msgstr ""
+
+#: ../bugmebar.php:264
+msgid "Fixed position bar"
+msgstr ""
+
+#: ../bugmebar.php:265
+msgid "This will fix BugMeBar to the top of the page"
+msgstr ""
+
+#: ../bugmebar.php:275
+msgid "Fixed bar spacer"
+msgstr ""
+
+#: ../bugmebar.php:276
+msgid ""
+"Want to create a bit of space for a fixed bar to go in rather than overlay "
+"content? Set to Yes. Only use this in conjunction with the Fixed position "
+"option above."
+msgstr ""
+
+#: ../bugmebar.php:286
+msgid "Z-index"
+msgstr ""
+
+#: ../bugmebar.php:287
+msgid "Add another 9 if BugMeBar is showing underneath content"
+msgstr ""
+
+#: ../bugmebar.php:293
+msgid "Colour 1"
+msgstr ""
+
+#: ../bugmebar.php:294
+msgid ""
+"This is the main colour of the banner and will be used if you turn the "
+"colour fader off"
+msgstr ""
+
+#: ../bugmebar.php:300
+msgid "Colour 2"
+msgstr ""
+
+#: ../bugmebar.php:307
+msgid "Colour 3"
+msgstr ""
+
+#: ../bugmebar.php:314 ../bugmebar.php:321
+msgid "Colour 5"
+msgstr ""
+
+#: ../bugmebar.php:328
+msgid "Colour 6"
+msgstr ""
+
+#: ../bugmebar.php:335
+msgid "Colour 7"
+msgstr ""
+
+#: ../bugmebar.php:352
+msgid "BugMeBar Settings"
+msgstr ""

@@ -1,0 +1,120 @@
+.sidebar {
+
+	.widget {
+
+		margin: 0;
+		padding: 0;
+
+		@include breakpoint($xga) {
+			margin: 0 5rem 0 0;
+			padding: 0;
+		}
+
+		h3 {
+			font-weight: 700;
+			padding-bottom: 1.6rem;
+			border-bottom: 5px solid $brand-yellow;
+			margin: 0;
+		}
+
+		ul.menu {
+			padding: 0;
+			margin: 0;
+
+			ul.sub-menu { display: none; padding: 0; }
+
+			& > li { display: none; }
+
+			// Need to show ancestor li so nested aren't hidden,
+			// but need to hide actual anchor
+			li.current-menu-ancestor {
+				display: block;
+
+				& > a { display: none; }
+
+				ul.sub-menu { display: block; }
+			}
+
+			// Don't display uncle/aunt list items
+			// (items that belong to grandparent but aren't ancestors themselves)
+			li.current-menu-ancestor li:not( .current-menu-ancestor ) {
+				display: none;
+			}
+
+			// Show the menu parent as the bold title
+			// but also show the current-menu-item in the edge case of a first level page
+			li.current-menu-parent,
+			& > li.current-menu-item {
+					
+				display: block;
+
+				& > ul.sub-menu {
+
+					display: block;
+
+					li {
+						list-style: none;
+						margin-bottom: 2rem;
+
+						a {
+							color: $brand-blue;
+							font-size: 1.6rem;
+							font-weight: normal;
+							padding-bottom: 0;
+							border-bottom: none;
+							margin: 0;
+						}
+					}
+
+					li.current-menu-item > a { font-weight: 700; }
+				}
+
+				& > a {
+					display: block !important;
+					width: 100%;
+					padding-bottom: 1.6rem; margin: 0 0 3rem 0;
+
+					color: $black;
+					font-size: 2.1rem;
+					font-weight: 700;
+					
+					border-bottom: 5px solid $brand-yellow;
+
+				}
+			}
+		}
+
+		li.current-menu-parent,
+		li.current-menu-item {
+
+			& > ul.sub-menu {
+
+				& > li { 
+
+					display: block !important;
+
+					&.current-menu-item > ul.sub-menu {
+						display: block;
+						padding: 2rem 0 0 2rem;
+
+						a { font-weight: normal; }
+
+						ul.sub-menu {
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body {
+	
+	&.blog, &.single-post, &.single-resource, &.where-we-work {
+	
+		aside.sidebar {
+			display: none;
+		}
+	}
+}

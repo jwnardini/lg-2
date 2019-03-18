@@ -1,0 +1,60 @@
+@mixin icon( $icon-position ) {
+	&:before {
+		content: '';
+		display: block; position: absolute;
+		width: 4rem; height: 4rem;
+		left: 0; top: .5rem;
+		background: url( '../../dist/images/icons.png' ) $icon-position center no-repeat;
+	}
+}
+
+@mixin currentNav() {
+	a {
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			background-color: $brand-yellow;
+			padding-bottom: .5rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+
+		}
+	}
+}
+
+@mixin selfclear() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin stripes( $foreground, $background ) {
+	background: repeating-linear-gradient(
+		-45deg,
+		$foreground, $foreground 1px,
+		$background 2px, $background 6px
+	);
+}
+
+@mixin chevron( $underline ) {
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+
+	&:after {
+		content: '\203A';
+		padding-left: 5px;
+		font-size: 1.8rem;
+		line-height: 1.4rem;
+		// vertical-align: bottom;
+	}
+
+	&:hover {
+		border-bottom: 1px solid $underline;
+	}
+}

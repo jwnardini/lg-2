@@ -1,0 +1,128 @@
+.where-we-work {
+
+	header.banner {
+
+		border-bottom: .5rem solid $brand-yellow;
+
+		&:after {
+			content: '';
+			display: block; position: relative;
+			height: 15rem; width: 100%;
+			padding: 0;
+			background: {
+				position: center bottom;
+				repeat: no-repeat;
+				color: #49759b;
+				size: auto 15rem;
+			}
+
+			@include breakpoint( $phablet ) {
+				height: 25rem;
+				background-size: auto 25rem;
+			}
+
+			@include breakpoint( $vga ) {
+			}
+
+			@include breakpoint( $xga ) {
+				height: 50rem;
+				background-size: auto 51rem;
+			}
+
+			@include breakpoint( $wide ) {
+				background-size: auto;
+			}
+		}
+
+
+	}
+
+	.breadcrumbs {
+		display: none;
+	}
+
+	&.sidebar-primary main {
+		width: 100%;
+		padding: 0 $gutter;
+
+		.page-header {
+			border: none;
+		}
+
+		.container {
+			padding: 0;
+		}
+
+		h1 {
+			position: absolute;
+			top: -6rem;
+			color: $white;
+			font: {
+				size: 3rem;
+				weight: $font-bold;
+			}
+
+			@include breakpoint( $vga ) {
+				top: -10rem;
+				font-size: 4rem;
+			}
+		}
+
+		section.countries {
+
+			h3 {
+				padding: $gutter 0;
+				font-size: 3rem;
+				font-weight: $font-bold;
+				line-height: 3rem;
+				text-transform: capitalize;
+			}
+
+			.col-sm-6 {
+				padding: 0;
+
+				@include breakpoint( $vga ) {
+					padding: $gutter;
+				}
+			}
+
+			img {
+				width: 80%;
+				//border: .5rem solid $brand-yellow;
+			}
+
+			h4 {
+				@include chevron( $dark-blue );
+
+				display: inline-block;
+				font-size: 2.4rem;
+				clear: both;
+
+				&:after {
+					line-height: .9;
+					font-size: 2.8rem;
+				}
+
+				a {
+					text-decoration: none;
+				}
+			}
+
+			ul {
+				padding: $gutter $gutter*2;
+
+				li {
+					padding: 0; margin: 0;
+					//font-size: 1.6rem;
+				}
+			}
+		}
+
+
+		section.quality-assurance-labs {
+			display: none;
+		}
+
+	}
+
+}

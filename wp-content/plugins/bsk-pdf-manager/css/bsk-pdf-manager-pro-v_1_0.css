@@ -1,0 +1,315 @@
+
+.bsk-pdfm-error-message{
+    color: #FF0000;
+}
+
+/*
+  * Category
+  */
+
+.category-hierarchical-depth-2,
+.category-hierarchical-depth-3{
+    margin-left:  20px;
+}
+
+.category-hierarchical-depth-2.bsk-pdfm-no-ident,
+.category-hierarchical-depth-3.bsk-pdfm-no-ident{
+    margin-left: 0;
+}
+
+.bsk-pdfm-category-description{
+    margin-bottom: 0.5rem;
+}
+/*
+  * PDFs
+  */
+/*  ul */
+.bsk-pdfm-pdfs-ul-list{
+    margin: 1rem 0 1rem 0;
+}
+
+.bsk-pdfm-pdfs-ul-list li{
+    list-style-type: none;
+}
+
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image li{
+    padding-top: 10px;
+}
+
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-without-description img {
+    vertical-align: middle;
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-without-description .bsk-pdfm-pdf-link-for-title{
+    margin-left: 10px;
+}
+
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description img,
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-title img{
+	float: left;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description li:after,
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-title li:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description .bsk-pdfm-pdf-link-for-title{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description.bsk-pdfm-featured-image-right img,
+.bsk-pdfm-pdfs-ul-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-title.bsk-pdfm-featured-image-right img{
+    float: right;
+    padding-right: 0px;
+    padding-left: 10px;
+}
+
+/*  ol */
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image li{
+    padding-top: 10px;
+}
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-without-description img {
+    vertical-align: middle;
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-without-description .bsk-pdfm-pdf-link-for-title{
+    margin-left: 10px;
+}
+
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description img,
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-title img{
+	float: left;
+    padding-right: 10px;
+}
+
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description li:after,
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-title li:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description .bsk-pdfm-pdf-link-for-title{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-description.bsk-pdfm-featured-image-right img,
+.bsk-pdfm-pdfs-ol-list.bsk-pdfm-with-featured-image.bsk-pdfm-with-title.bsk-pdfm-featured-image-right img{
+    float: right;
+    padding-right: 0px;
+    padding-left: 10px;
+}
+/*
+ * Column Class
+ *
+ * Use Genesis Column Class, you may find the orginal CSS codes from http://my.studiopress.com/docs/content-column-classes/
+ * 
+ * Add fifth column according to https://gist.github.com/wpsmith/6201969
+ * 
+ * In order to avoid name conflict, "bsk-pdfm-" has been added as prefix.
+ */
+/* Column Classes
+   Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+
+.bsk-pdfm-one-fourth,
+.bsk-pdfm-one-half,
+.bsk-pdfm-one-sixth,
+.bsk-pdfm-one-third,
+.bsk-pdfm-one-fifth {
+	float: left;
+	margin-left: 2.564102564102564%;
+}
+
+.bsk-pdfm-one-half {
+	width: 48.717948717948715%;
+}
+
+.bsk-pdfm-one-third {
+	width: 31.623931623931625%;
+}
+
+.bsk-pdfm-one-fourth {
+	width: 23.076923076923077%;
+}
+
+.bsk-pdfm-one-fifth {
+	width: 17.9487179487179488%;
+}
+
+.bsk-pdfm-one-sixth {
+	width: 14.52991452991453%;
+}
+
+.bsk-pdfm-first {
+	clear: both;
+	margin-left: 0;
+}
+
+/*  column */
+.bsk-pdfm-output-container:after,
+.bsk-pdfm-widget-output-container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.bsk-pdfm-pdfs-columns-list .bsk-pdfm-columns-single .bsk-pdfm-pdf-title{
+    display: block;
+}
+.bsk-pdfm-pdfs-columns-list .bsk-pdfm-columns-single .bsk-pdfm-pdf-title.pdf-title-above{
+    margin-bottom: 5px;
+}
+.bsk-pdfm-pdfs-columns-list.bsk-pdfm-wih-featured-image .bsk-pdfm-columns-single{
+    padding-bottom: 10px;
+}
+
+.bsk-pdfm-pdfs-columns-list.bsk-pdfm-wih-featured-image .bsk-pdfm-columns-single img{
+    width: auto;
+    max-width: 100%;
+}
+
+.bsk-pdfm-pdfs-columns-list .bsk-pdfm-year-month-filter-select{
+    display: block;
+}
+
+.bsk-pdfm-pdfs-columns-list .bsk-pdfm-columns-single {
+    margin-bottom: 0.5rem;
+}
+
+.bsk-pdfm-pdfs-columns-list .bsk-pdfm-columns-single a{
+    line-height: 1.8rem;
+}
+
+/*
+ * Selector
+ */
+.bsk-pdfm-selector-container{
+    padding-bottom: 0.5rem;
+}
+
+.bsk-pdfm-category-selector-ajax-loader{
+    display: none;
+    margin-left: 5px;
+}
+
+/*
+  * Pagination
+  */
+.bsk-pdfm-pagination {
+    clear: both;
+    font-size: 12px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 1rem 0px 1rem 0px;
+    text-transform: uppercase;
+}
+
+.bsk-pdfm-pagination ul {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.bsk-pdfm-pagination ul li {
+    padding: 0;
+    margin: 0;
+    background: none;
+    display: inline-block;
+}
+
+.bsk-pdfm-pagination ul li a {
+    background-color: #FFFFFF;
+    border: 1px solid #4d4d4f;
+    color: #4d4d4f;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 6px;
+    text-decoration: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.bsk-pdfm-pagination ul li.active a {
+    background-color: #4d4d4f;
+    color: #fff;
+}
+
+.bsk-pdfm-pagination ul li a:hover {
+	background-color: #4d4d4f;
+	color: #ffffff;
+    text-decoration: none;
+     box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.bsk-pdfm-pagination-ajax-loader{
+    display: none;
+    margin-left: 5px;
+}
+
+/*
+ * Search bar
+ */
+.bsk-pdfm-search-bar{
+    padding: 5px 0px;
+}
+.bsk-pdfm-search-bar .bsk-pdfm-search-anchor{
+    margin-left:  10px;
+}
+
+.bsk-pdfm-searchbar-ajax-loader{
+    display: none;
+}
+
+/*
+ * Date filter
+ */
+.bsk-pdfm-date-filter{
+    padding: 5px 0px;
+}
+
+.bsk-pdfm-date-filter select{
+    height: 1.5em;
+}
+
+.bsk-pdfm-date-filter-gap{
+    margin-left: 10px;
+}
+
+/*
+ * Search Bar
+*/
+.bsk-pdfm-search-clear-anchor{
+    margin-left: 10px;
+    display: none;
+}
+
+/*
+  * password form
+*/
+.bsk-pdfm-category-password-require-form input[type="text"]{
+    width: 50%;
+    display: inline-block;
+}
+
+.bsk-pdfm-category-password-verify-anchor{
+    display: inline-block;
+    margin-left: 10px;
+}
+.bsk-pdfm-category-password-verify-ajax-loader{
+    display: none;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,112 @@
+
+.bsk-pdf-manager-cat-container-widget li,
+.bsk-pdf-manager-container-widget li,
+.bsk-special-pdfs-container li {
+	list-style-type:none;
+    padding-top:  10px;
+}
+
+.bsk-pdf-manager-cat-container-widget li img,
+.bsk-pdf-manager-container-widget li img{
+    display: inline-block;
+	vertical-align: middle;
+}
+
+.bsk-special-pdfs-container img,
+.bsk-special-pdfs-container-ordered-list img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.bsk-pdf-manager-pdf-title {
+	display: inline-block;
+    vertical-align: middle;
+	padding-left: 10px;
+}
+
+/*
+ *Selector widget
+*/
+
+.bsk-pdfm-selector-ajax-loader-span-widget{
+	padding: 0 0 0 5px;
+}
+
+.bsk-pdf-manager-selector-list-widget li{
+	list-style: none;
+}
+
+/*
+ *Selector shortcode
+*/
+.bsk-pdfm-selector-pdfs-list li{
+	list-style: none;
+}
+.bsk-pdfm-selector-pdfs-list img,
+.bsk-pdfm-selector-pdfs-ordered-list img {
+	display: inline-block !important;
+	vertical-align: middle;
+}
+
+.bsk-pdfm-list-selector-additional-filter-select{
+    margin-left: 10px;
+}
+
+/*
+ * Column Class
+ *
+ * Use Genesis Column Class, you may find the orginal CSS codes from http://my.studiopress.com/docs/content-column-classes/
+ * 
+ * Add fifth column according to https://gist.github.com/wpsmith/6201969
+ * 
+ * In order to avoid name conflict, "bsk-pdfm-" has been added as prefix.
+ */
+/* Column Classes
+   Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+
+.bsk-pdfm-one-fourth,
+.bsk-pdfm-one-half,
+.bsk-pdfm-one-sixth,
+.bsk-pdfm-one-third,
+.bsk-pdfm-one-fifth {
+	float: left;
+	margin-left: 2.564102564102564%;
+}
+
+.bsk-pdfm-one-half {
+	width: 48.717948717948715%;
+}
+
+.bsk-pdfm-one-third {
+	width: 31.623931623931625%;
+}
+
+.bsk-pdfm-one-fourth {
+	width: 23.076923076923077%;
+}
+
+.bsk-pdfm-one-fifth {
+	width: 17.9487179487179488%;
+}
+
+.bsk-pdfm-one-sixth {
+	width: 14.52991452991453%;
+}
+
+.bsk-pdfm-first {
+	clear: both;
+	margin-left: 0;
+}
+
+.bsk-pdf-item{
+	display:block;
+}
+.bsk-pdf-item .bsk-pdf-manager-pdf-title{
+	display:block;
+}
+
+
+.bsk-pdf-clear-both{
+	clear:both;
+}

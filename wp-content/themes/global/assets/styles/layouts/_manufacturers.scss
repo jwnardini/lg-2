@@ -1,0 +1,27 @@
+section {
+	
+	&.manufacturers {
+		overflow: hidden;
+
+		div {
+
+			margin-bottom: 3rem;
+
+			&:nth-child(2n+1) {
+				clear: left;
+			}
+
+			&.manufacturer {
+				width: 100%;
+
+				@include breakpoint($xga) {
+					width: 50%;
+					float: left;
+					padding: 0 2rem;
+					
+				}
+			}
+		}
+	}
+
+}

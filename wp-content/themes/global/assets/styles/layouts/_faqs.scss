@@ -1,0 +1,86 @@
+.accordion {
+		dt{
+			padding-bottom: 3rem;
+			
+			h3{
+				position: relative;
+				padding: 0 0 0 4rem;
+				margin: 0;
+				font-size: 2.2rem; 
+				line-height: 2.7rem;
+
+				@include breakpoint($xga){
+					font-size: 2.6rem;
+    				line-height: 3.2rem;
+				}
+
+				&:before {
+					content: "+";
+					background: $brand-yellow;
+					font-size: 1.4rem;
+					line-height: 2rem;
+					width: 2rem;
+  					margin-left: 0;
+  					position: absolute;
+  					top: 0.5rem;
+  					left: 0rem;
+					vertical-align: middle;
+					text-align: center;
+					font-weight: bold;
+				}
+				&:hover{
+					&:before{
+						color: $brand-yellow;
+						background: $black;
+					}
+				}
+
+				span {
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+
+		dt.expanded{
+			//margin-bottom: 2rem;
+			h3{
+				&:before {
+					content: "-";
+					background: $brand-yellow;
+					font-size: 1.4rem;
+					line-height: 2rem;
+					width: 2rem;
+  					margin-left: 0;
+  					position: absolute;
+  					top: 0.5rem;
+  					left: 0rem;
+					vertical-align: middle;
+					text-align: center;
+					font-weight: bold;
+				}
+
+				&:hover{
+					&:before{
+						color: $black;
+						background: $brand-yellow;
+						//@include hover-transition;
+					}
+				}
+			}
+		}
+   		dt, dd {
+   			cursor: pointer;
+
+   			p {
+   				margin: 0;
+   			}
+   		}
+
+   		dd {
+   			padding-left: 4rem;
+   			margin: 0 0 2rem 0;
+   		}
+	}

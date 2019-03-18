@@ -1,0 +1,73 @@
+@mixin cf
+  &::after, &::before
+    content: ' '
+    display: table
+    clear: both
+
+#esdc-theme-options-wrap
+  // border: 1px solid black
+  *
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+  min-width: 585px
+  #tabbed
+    position: relative
+    width: 95%
+    display: block
+    clear: both
+    padding-bottom: 24px
+    +cf
+    .esdc-container
+      display: none
+      // padding: 0 20px
+      &.active
+        display: block
+      #searchfield
+        max-width: 300px
+        label
+          +cf
+          display: block
+          line-height: 25px
+          vertical-align: middle
+          background-position: 0 5px
+          margin-bottom: 12px
+          input
+            float: right
+            width: 230px
+      table
+        border: 1px solid black
+        thead
+          background-color: lighten( gray, 10% )
+          tr
+            th
+              font-weight: bold
+              text-align: center
+              line-height: 3em
+              padding: 0 18px
+        tbody
+          tr
+            &:nth-child( even )
+              background-color: lighten( gray, 30% )
+            td
+              text-align: center
+              padding: 0 18px
+              line-height: 2em
+      &.esdc-options
+        th
+          background-color: lighten( gray, 30% )
+          padding-top: 12px
+          padding-bottom: 12px
+        td
+          padding-top: 12px
+          padding-bottom: 12px
+          label
+            text-align: left
+            display: block
+            font-style: italic
+            input
+              display: block
+              width: 100%
+
+
+

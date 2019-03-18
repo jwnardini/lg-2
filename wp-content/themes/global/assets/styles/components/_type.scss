@@ -1,0 +1,408 @@
+//
+// Typography
+// --------------------------------------------------
+
+main {
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  clear: both;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    color: $headings-small-color;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+h1, .h1 { 
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+
+h2, .h2 { 
+  font-size: 2.2rem; 
+  line-height: 3rem; 
+  color: #363636; 
+
+  @include breakpoint($vga){
+    font-size: 3.2rem; 
+    line-height: 4rem;
+  }
+}
+
+h3, .h3 { 
+  font-size: 1.6rem; 
+  line-height: 2.2rem; 
+
+  @include breakpoint($vga){
+    font-size: 2.6rem; 
+    line-height: 3.2rem; 
+  }
+}
+
+h4, .h4 { 
+  font-size: 1.8rem; 
+  line-height: 2.8rem; 
+  color: $brand-blue; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+
+  @include breakpoint($vga){
+    font-size: 1.8rem; 
+    line-height: 2.8rem; 
+  }
+
+}
+
+h5, .h5 { 
+  font-size: $font-size-h5; 
+}
+
+h6, .h6 { 
+  font-size: $font-size-h6; 
+}
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 2rem 0;
+}
+
+.lead {
+  margin-bottom: $line-height-computed;
+  font-size: floor(($font-size-base * 1.15));
+  font-weight: 300;
+  line-height: 1.4;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: ($font-size-base * 1.5);
+  }
+}
+
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small {
+  font-size: floor((100% * $font-size-small / $font-size-base));
+}
+
+mark,
+.mark {
+  background-color: $state-warning-bg;
+  padding: .2em;
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Contextual colors
+.text-muted {
+  color: $text-muted;
+}
+
+@include text-emphasis-variant('.text-primary', $brand-primary);
+
+@include text-emphasis-variant('.text-success', $state-success-text);
+
+@include text-emphasis-variant('.text-info', $state-info-text);
+
+@include text-emphasis-variant('.text-warning', $state-warning-text);
+
+@include text-emphasis-variant('.text-danger', $state-danger-text);
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  color: #fff;
+}
+@include bg-variant('.bg-primary', $brand-primary);
+
+@include bg-variant('.bg-success', $state-success-bg);
+
+@include bg-variant('.bg-info', $state-info-bg);
+
+@include bg-variant('.bg-warning', $state-warning-bg);
+
+@include bg-variant('.bg-danger', $state-danger-bg);
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding: 0;
+  border-bottom: none;
+  margin: 0;
+
+}
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+
+
+  ul,
+  ol {
+    padding-top: 0;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding-left: 3.8rem;
+
+    li {
+      color: #333333 !important;
+      font-size: 1.8rem;
+      line-height: 2.9rem;
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+
+      a {
+
+        &:hover {
+          color: $brand-blue;
+          text-decoration: underline;
+        }
+      }
+
+      ul,
+      ol {
+        padding-top: 2rem;
+        margin-top: 0;
+        margin-bottom: 7.5rem;
+        padding-left: 3.8rem;
+
+        li {
+          color: $grey !important;
+          font-size: 1.8rem;
+          line-height: 2.9rem;
+          margin-bottom: 2rem;
+          padding-left: 1rem;
+          list-style: disc;
+        }
+      }
+    }
+  }
+
+
+// List options
+
+// [converter] extracted from `.list-unstyled` for libsass compatibility
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+.list-unstyled {
+  @include list-unstyled;
+}
+
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+}
+dt,
+dd {
+  line-height: $line-height-base;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal {
+  dd {
+    @include clearfix; // Clear the floated `dt` if an empty `dd` is present
+  }
+
+  @media (min-width: $dl-horizontal-breakpoint) {
+    dt {
+      float: left;
+      width: ($dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      @include text-overflow;
+    }
+    dd {
+      margin-left: $dl-horizontal-offset;
+    }
+  }
+}
+
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  @extend .text-uppercase;
+}
+
+// Blockquotes
+blockquote {
+    padding: 0 5rem;
+    margin: 5rem 0 7rem 0;
+    border-left: none;
+    position: relative;
+
+    &:before {
+      content: '“';
+      font-family: Georgia, serif;
+      font-size: 10rem;
+      color: $brand-yellow;
+      position: absolute;
+      top: -2.5rem;
+      left: 0;
+    }
+
+    p {
+
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+
+      @include breakpoint($vga) {
+        font-size: 3rem;
+        line-height: 3.8rem;
+      }
+
+      strong {
+          display: block;
+          font-size: 1.8rem;
+          line-height: 2.9rem;
+          font-weight: 400;
+          padding-top: 2rem;
+          color: $grey;
+
+          &:before {
+            content: "-";
+            padding-right: 1rem;
+          }
+      }
+    }
+}
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: $line-height-base;
+    color: $blockquote-small-color;
+
+    &:before {
+      content: ''; // em dash, nbsp
+    }
+  }
+
+// Addresses
+address {
+  margin-bottom: $line-height-computed;
+  font-style: normal;
+  line-height: $line-height-base;
+}
+
+article{
+  margin-bottom: 5rem;
+  .entry-meta {
+    margin-bottom: 1rem;
+
+    time {
+      font-weight: 700;
+    }
+  }
+  
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+}
+
+}

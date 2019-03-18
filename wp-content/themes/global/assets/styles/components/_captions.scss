@@ -1,0 +1,39 @@
+main {
+	figure{
+		&.wp-caption {
+			width: 100% !important;
+		}
+
+		.wp-caption {
+			display: block;
+		    padding: 0;
+		    margin-bottom: 20px;
+		    line-height: 1.428571429;
+		    background-color: #fff;
+		    border: none;
+		    border-radius: none;
+		    max-width: 100%;
+		    
+		}
+
+		&.alignleft {
+			max-width: 100%;
+
+			@include breakpoint( $xga ){
+	    		max-width: 300px;
+	    	}
+	    }
+
+	    &.alignright {
+	    	max-width: 100%;
+
+	    	@include breakpoint( $xga ){
+	    		max-width: 300px;
+	    	}
+	    }
+
+	    &.alignnone {
+	    	max-width: 100%;
+	    }
+	}
+}

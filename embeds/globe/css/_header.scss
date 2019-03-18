@@ -1,0 +1,14 @@
+header{
+	position:relative;
+	text-align: center;
+	height:50px;
+	background:white;
+	padding:0 10px;
+
+	img{
+		@include hv-align;
+		display:block;
+		max-height:40px;
+		max-width: 90%;
+	}
+}

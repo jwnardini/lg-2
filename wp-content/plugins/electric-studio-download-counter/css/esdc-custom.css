@@ -1,0 +1,64 @@
+#esdc-theme-options-wrap {
+  min-width: 585px; }
+  #esdc-theme-options-wrap * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  #esdc-theme-options-wrap #tabbed {
+    position: relative;
+    width: 95%;
+    display: block;
+    clear: both;
+    padding-bottom: 24px; }
+    #esdc-theme-options-wrap #tabbed::after, #esdc-theme-options-wrap #tabbed::before {
+      content: " ";
+      display: table;
+      clear: both; }
+    #esdc-theme-options-wrap #tabbed .esdc-container {
+      display: none; }
+      #esdc-theme-options-wrap #tabbed .esdc-container.active {
+        display: block; }
+      #esdc-theme-options-wrap #tabbed .esdc-container #searchfield {
+        max-width: 300px; }
+        #esdc-theme-options-wrap #tabbed .esdc-container #searchfield label {
+          display: block;
+          line-height: 25px;
+          vertical-align: middle;
+          background-position: 0 5px;
+          margin-bottom: 12px; }
+          #esdc-theme-options-wrap #tabbed .esdc-container #searchfield label::after, #esdc-theme-options-wrap #tabbed .esdc-container #searchfield label::before {
+            content: " ";
+            display: table;
+            clear: both; }
+          #esdc-theme-options-wrap #tabbed .esdc-container #searchfield label input {
+            float: right;
+            width: 230px; }
+      #esdc-theme-options-wrap #tabbed .esdc-container table {
+        border: 1px solid black; }
+        #esdc-theme-options-wrap #tabbed .esdc-container table thead {
+          background-color: #9a9a9a; }
+          #esdc-theme-options-wrap #tabbed .esdc-container table thead tr th {
+            font-weight: bold;
+            text-align: center;
+            line-height: 3em;
+            padding: 0 18px; }
+        #esdc-theme-options-wrap #tabbed .esdc-container table tbody tr:nth-child(even) {
+          background-color: #cccccc; }
+        #esdc-theme-options-wrap #tabbed .esdc-container table tbody tr td {
+          text-align: center;
+          padding: 0 18px;
+          line-height: 2em; }
+      #esdc-theme-options-wrap #tabbed .esdc-container.esdc-options th {
+        background-color: #cccccc;
+        padding-top: 12px;
+        padding-bottom: 12px; }
+      #esdc-theme-options-wrap #tabbed .esdc-container.esdc-options td {
+        padding-top: 12px;
+        padding-bottom: 12px; }
+        #esdc-theme-options-wrap #tabbed .esdc-container.esdc-options td label {
+          text-align: left;
+          display: block;
+          font-style: italic; }
+          #esdc-theme-options-wrap #tabbed .esdc-container.esdc-options td label input {
+            display: block;
+            width: 100%; }

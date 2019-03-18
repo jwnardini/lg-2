@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import 'vars';
+
+*{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family:"Cervo-Light";
+	font-size:16px;
+	padding:0;margin:0;
+	text-decoration:none;
+	color:black;
+	list-style-type:none;
+	font-weight:400;
+	border:none;
+	background-repeat:no-repeat;
+	}
+
+html{
+	width:100%;
+	}
+
+body{
+	background-color:white;
+	width:100%;
+	}
+
+form{
+	input, textarea{
+		border:1px solid black;
+	}
+}
+
+h2{
+	color:$medBlue;
+}
+
+a, strong, .strong{
+	//font-family:"Open Sans Semibold";
+	font-weight:400;
+	font-size:inherit;
+	color:inherit;
+}
+
+p a, p strong, li a, li strong{
+	font-size:inherit;
+}
+
+p a, li a{
+	text-decoration:underline;
+}
+
+
+canvas{
+	display:block;
+}
+
+
+@import 'keyframes';
+
+@import 'phone';
+
+@media screen and (max-width:320px){
+@import 'max320';
+}
+
+@media screen and (min-width:600px){
+@import 'large';
+}
+
+@import 'header';
+@import 'sections';
+
+//@import 'dlmenu';
+@import 'minilib';
+
+
+//form extra
+body.formOpen{
+	#ui, #intro, #topBanner, #footerBar{
+		display:none!important;
+	}
+
+	header, #introTopBanner, #form{
+		display:block!important;
+	}
+}

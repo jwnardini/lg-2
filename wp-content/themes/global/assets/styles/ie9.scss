@@ -1,0 +1,41 @@
+header.banner nav.nav-primary {
+	background-color: #015b80;
+}
+
+#associate-program, #featured-products {
+	background-image: url('../images/lg-bg-2.png');
+}
+
+section#slider aside#latest-news, section#slider .slide .container .text p {
+	background: hsla(0,0%,9%,.8);
+}
+
+section#slider .slide .container .text p {
+	padding: 1.5rem !important;
+}
+
+section#featured-products ul li.next:after, section#featured-products ul li.prev:after {
+	padding-top: 0px !important;
+	line-height: 0px !important;
+	top: 0rem !important;
+	width: 30px;
+    height: 30px;
+    display: block;
+
+    background-color: red;
+}
+
+section#associate-program ul.countries li a i:after {
+	-ms-transform: rotate(45deg);
+}
+
+section#slider aside#latest-news h2:after, section#featured-products ul li a div:after {
+	-ms-transform:rotate(45deg); /* IE9 */
+}
+
+form.search button[type=submit]:after, form.search input[type=submit]:after {
+	-ms-transform:rotate(-45deg); /* IE9 */
+}
+
+
+

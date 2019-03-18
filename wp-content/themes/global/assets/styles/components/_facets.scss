@@ -1,0 +1,250 @@
+.facet-filter {
+	display: block; position: fixed; z-index: 100;
+	left: 0; right: 0; bottom: 0; top: auto;
+
+	height: 6rem;
+	padding: 0;
+
+	overflow: hidden;
+
+	background: $offwhite;
+
+	transition: height $toggleTime;
+
+	@include breakpoint( $xga ) {
+		position: inherit;
+		height: auto;
+		left: auto; right: auto; bottom: auto; top: auto;
+		padding: 0 $gutter 10rem;
+
+		background: none;
+	}
+
+	.page-header {
+		padding: 0 1.5rem; margin: 0;
+		border: none;
+		border-top: 4px solid $brand-yellow;
+
+		@include breakpoint( $xga ) {
+			padding: 0;
+		}
+
+		h1.toggle {
+			padding: 1.5rem 0 0 3rem; margin: 0;
+
+			font-size: 2rem;
+			line-height: 3rem;
+			text-transform: uppercase;
+			color: $black;
+			font-weight: $font-bold;
+
+			cursor: pointer;
+
+			@include breakpoint( $xga ) {
+				padding: 1rem 0 0;
+				font-size: 1.6rem;
+			}
+
+			&:before {
+				content:"+";
+				display: block; position: absolute;
+
+				top: 2.5rem;
+
+				width: 2rem; height: 2rem;
+				padding: 0; margin: 0 0 0 -3rem;
+
+				text-align: center;
+				font-size: 2rem;
+				line-height: 2rem;
+
+				background: $brand-yellow;
+				border-radius: .3rem;
+				color: $black;
+
+				transform: rotate(0deg);
+
+				transition: transform $toggleTime, border-radius $toggleTime;
+
+				@include breakpoint( $xga ) {
+					display: none;
+				}
+			}
+		}
+
+	}
+
+	.facets {
+
+		padding: 0 15px;
+
+		@include breakpoint( $xga ) {
+			padding: 0;
+		}
+
+		.facet {
+
+			padding: 2rem 0;
+			border-bottom: 1px solid $lgrey;
+
+			@include breakpoint( $xga ) {
+				padding: 1rem 0;
+			}
+
+			h2 {
+				padding: .5rem 0 .5rem 3rem; margin: 0;
+
+				font-size: 1.8rem;
+				font-weight: $font-bold;
+				line-height: 2rem;
+
+				color: $brand-blue;
+				cursor: pointer;
+
+				@include breakpoint( $xga ) {
+					padding-left: 2rem;
+				}
+
+				&:before {
+					content:"–";
+					display: block; position: absolute;
+
+					width: 2rem; height: 2rem;
+					padding: 0; margin: 0 0 0 -2rem;
+
+					text-align: center;
+					font-size: 1.6rem;
+					line-height: 1.9rem;
+					vertical-align: top;
+
+					color: $grey;
+				}
+			}
+
+			.facetwp-loading {
+				width: 1.8rem; height: 1.8rem;
+				background: url( '../images/facet-loader.svg') no-repeat;
+			}
+
+			.facetwp-type-checkboxes,
+			.facetwp-type-hierarchy {
+				height: 100%; max-height: 100%;
+				padding: 5px 0 0 30px; margin: 0;
+
+				overflow: hidden;
+
+				@include breakpoint( $xga ) {
+					padding-left: 20px;
+				}
+
+				.facetwp-checkbox {
+					padding: 2px 0 2px 30px;
+					color: $brand-blue;
+
+					.facetwp-counter {
+						font-weight: bold;
+					}
+				}
+			}
+
+			&.closed {
+
+				h2 {
+					&:before {
+						content:"+";
+						line-height: 2rem;
+					}
+				}
+				.facetwp-type-checkboxes,
+				.facetwp-type-hierarchy {
+					height: 0;
+				}
+			}
+		}
+	}
+
+	
+
+	&.open {
+
+		height: 100%;
+		overflow: scroll;
+
+		.page-header {
+
+			h1 {
+				&:before {
+					transform: rotate(45deg);
+					border-radius: 1rem;
+					line-height: 1.9rem;
+				}
+			}
+		}
+	}
+}
+
+
+.facets-container {
+
+	@include breakpoint( $xga ) {
+		padding: 0 0 0 $gutter*4;
+	}
+
+	.page-header {
+
+		padding-bottom: $gutter*2;
+		border: none;
+
+		h1 {
+			margin-top: -7px;
+		}
+
+		p {
+			margin-bottom: 0;
+
+			font: {
+				size: 1.8rem;
+			}
+			line-height: 2.6rem;
+		}
+
+		.facets-sorter {
+			padding: $gutter 0;
+
+			strong {
+				display: block;
+				margin: 1rem 0;
+				text-transform: uppercase;
+				font-size: 1.8rem;
+				line-height: 2.8rem;
+				color: $brand-blue;
+				font-weight: $font-bold;
+			}
+
+			.facetwp-sort {
+				position: relative;
+				width: 100%;
+
+				@include breakpoint( $ipad ) {
+					max-width: 300px;
+				}
+
+				@include breakpoint( $xga ) {
+					max-width: 200px;
+					border: none;
+				}
+
+				select {
+					width: 100%;
+					padding: 10px;
+					font-size: 24px;
+
+					@include breakpoint( $xga ) {
+						font-size: 16px;
+					}
+				}
+
+			}
+		}
+	}
+}

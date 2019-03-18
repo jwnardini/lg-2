@@ -1,0 +1,119 @@
+
+$light:300;
+$book:400;
+$heavy:600;
+
+$darkBlue:#012445;
+$medBlue:#00acf2;
+$buttonColor:#cc8855;
+$yellow:#fbae17;
+$green:#88a80d;
+$purple:#7F47DD;
+
+
+
+//1 = med blue
+//2 = yellow
+//3 = green
+//4 = purple
+//5 = yellow
+
+//used
+$blue6:#00acf2;// = med blue
+$purple7:#7F47DD;
+$red8:#a81d3f;
+$green9:#88a80d;
+$orange10:#e4892c;
+$blue11:#00acf2;
+
+@mixin noTapHighLight(){
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+@mixin no-select(){
+	//disable text selection
+	user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+@mixin b-sizing() {
+	-webkit-box-sizing: border-box;// Safari 5, ios 4.x
+	box-sizing: border-box;
+}
+
+@mixin v-align() {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);//android 4.x
+	-ms-transform: translateY(-50%);//ie9
+	transform: translateY(-50%);
+}
+
+@mixin disable-v-align() {
+	position: relative;
+	top: 0%;
+	-webkit-transform: translateY(0);//android 4.x
+	-ms-transform: translateY(0);//ie9
+	transform: translateY(0);
+}
+
+@mixin h-align() {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);//android 4.x
+	-ms-transform: translateX(-50%);//ie9
+	transform: translateX(-50%);
+}
+
+@mixin hv-align() {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);//android 4.x
+	-ms-transform: translate(-50%, -50%);//ie9
+	transform: translate(-50%, -50%);
+}
+
+@mixin disable-h-align() {
+	position: relative;
+	left: 0%;
+	-webkit-transform: translateX(0);//android 4.x
+	-ms-transform: translateX(0);//ie9
+	transform: translateX(0);
+}
+
+@mixin disable-hv-align() {
+	position: relative;
+	left: 0%;
+	top: 0%;
+	-webkit-transform: translate(0%, 0%);//android 4.x
+	-ms-transform: translate(0%, 0%);//ie9
+	transform: translate(0%, 0%);
+}
+
+@mixin fixed-table()
+{
+	border:none;
+	table-layout:fixed;
+	//border-collapse:collapse;//done in css
+}
+
+@mixin columns($nb)
+{
+	-webkit-column-count: $nb; // Chrome, Safari, Opera
+	-moz-column-count: $nb; // Firefox
+	column-count: $nb;
+}
+
+@mixin innerBorder($color)
+{
+	-webkit-box-shadow: inset 0px 0px 0px 1px $color;
+	-moz-box-shadow: inset 0px 0px 0px 1px $color;
+	box-shadow: inset 0px 0px 0px 1px $color;
+}
+
+@mixin textShadow
+{
+	text-shadow: 0 2px 1px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,26 @@
+body {
+
+	&.error404,
+	&.search-no-results {
+
+		position: relative;
+
+		.breadcrumbs {
+			visibility: hidden;
+		}
+
+		main.main {
+			padding: 0 $gutter 8rem;
+			max-width: 100%;
+
+			@include breakpoint($ipad){
+				max-width: 128rem;
+				margin: auto;
+				float: none;
+				min-height: 77rem;
+			}
+		}
+		
+	}
+
+}

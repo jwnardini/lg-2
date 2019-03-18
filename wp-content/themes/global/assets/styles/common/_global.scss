@@ -1,0 +1,45 @@
+html, * { font-family: $font-family; }
+
+html { font-size: 10px; }
+
+body { -moz-osx-font-smoothing: grayscale; }
+
+html, body {
+	height: 100%;
+}
+
+.skip-link { padding: 3rem; position: absolute !important; background: $white; font-size: 2rem; text-transform: capitalize; }
+
+h1, h2, h3 { font-weight: normal; }
+
+p { 
+	font-size: 1.8rem; 
+	line-height: 2.6rem;
+}
+
+a { cursor: pointer; color: $brand-blue; }
+
+p a {
+	font-weight: bold;
+}
+
+img { max-width: 100%; }
+
+.content { @include selfclear() }
+
+html[data-useragent*='MSIE 10.0'],
+html[data-useragent*='Trident'] {
+	// section#featured-products ul li.next:after, 
+	// section#featured-products ul li.prev:after {
+	// 	padding-top: 20px !important;
+	// }
+
+	.facet-filter h1.toggle:before {
+		padding-top: 10px;
+	}
+
+	.facet h2:before {
+		padding-top: 10px !important;
+		line-height: .5rem !important;
+	}
+}

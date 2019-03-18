@@ -1,0 +1,242 @@
+.post-type-archive-product {
+
+	main {
+		@include selfclear();
+	}
+
+	.facets-container.products-container {
+
+		@include breakpoint( $xga ) {
+			padding: 0 0 0 $gutter*4;
+		}
+
+		ul.products {
+			@include selfclear();
+
+			list-style: none;
+
+			padding: 0;
+
+			& > li {
+				display: block; 
+				position: relative;
+				width: calc( 100% - #{$gutter*2} ); 
+				max-width: 31rem;
+				height: 40rem;
+				padding: 0; margin: 0 auto;
+				transition: height $toggleTime;
+
+				@include breakpoint( $vga ) {
+					width: 33%;
+					float: left;
+					padding-right: 2rem;
+				}
+
+				@include breakpoint( $wxga ) {
+					height: 43rem;
+				}
+
+				& > a {
+					display: block; position: relative;
+					margin: 0 auto;
+
+					div { 
+						position: relative;
+						height: 26rem;
+						line-height: 26rem;
+						margin-bottom: $gutter; 
+						border: 1px solid $lgrey;
+						text-align: center;
+					}
+
+					img {
+						max-width: 100%; 
+						height: auto;
+						padding: 0 $gutter*2;
+						vertical-align: middle;
+						display: inline-block;
+						
+					}
+
+					span.associate {
+						display: block; position: absolute;
+						left: 0; bottom: 0;
+						padding: .5rem 1.5rem;
+						text-transform: uppercase;
+						background: $brand-yellow;
+						color: $brand-black;
+						line-height: 1.6rem;
+						font: {
+							size: 1.2rem;
+							weight: $font-bold;
+						}
+					}
+
+					span.family {
+						display: inline-block;
+						min-height: 1.5rem;
+						margin-left: $gutter;
+						color: $brand-blue;
+						font-size: 1.3rem;
+						font-weight: $font-normal;
+						text-transform: uppercase;
+						text-decoration: none !important;
+    					line-height: 1.6rem;
+
+						&:hover i {
+							overflow: visible;
+
+							div {
+								display: block;
+								top: -36rem;
+								opacity: 1;
+							}
+						}
+
+						i {
+							display: inline-block; position: relative;
+							width: 1.4rem; height: 1.4rem;
+							padding: 0;
+							vertical-align: top;
+							border: .1rem solid $brand-blue;
+							border-radius: 1rem;
+
+							overflow: hidden;
+
+							&:before, &:after {
+								content: '';
+								display: block; position: absolute;
+								left: .5rem;
+								width: .2rem;
+								background: $brand-blue;
+							}
+
+							&:before {
+								top: .2rem;
+								height: .2rem;
+							}
+
+							&:after {
+								top: .5rem;
+								height: .6rem;
+							}
+
+							div {
+								display: block; position: absolute; z-index: 100;
+								width: 32rem; height: auto;
+								left: -16rem; top: -34rem;
+								padding: $gutter $gutter*2;
+								background: $offwhite;
+								color: $brand-black;
+								border: 1px solid $grey;
+								border-radius: .3rem;
+								font-size: 1.4rem;
+								font-style: normal;
+								line-height: 2.6rem;
+								text-transform: none;
+								opacity: 0;
+
+								transition: opacity $toggleTime, top $toggleTime;
+
+								&:after {
+									content: '';
+									display: block; position: absolute;
+									width: 2rem; height: 2rem;
+									left: 15rem; bottom: -1rem;
+
+									background: $offwhite;
+									border: 1px solid $grey;
+									border-width: 0 1px 1px 0;
+
+									transform: rotate(45deg);
+								}
+							}
+						}
+					}
+
+					h3 {
+						padding: 0; 
+						margin: 0 0 0 $gutter;
+						font-size: 1.8rem;
+						font-weight: bold;
+						line-height: 2.4rem;
+					}
+
+
+					p {
+						padding-top: 1rem; margin-left: $gutter;
+						color: $black;
+						font-size: 1.6rem;
+						line-height: 1.8rem;
+						margin-bottom: 1rem;
+					}
+				}
+				
+			}
+
+			ul.pdfs {
+				display: block;
+				height: 0;
+				padding: 1rem 0 0 $gutter;
+				opacity: 0;
+				transition: opacity $toggleTime, height $toggleTime;
+				overflow: hidden;
+
+				li {
+					position: relative;
+					padding: .25rem $gutter*2; margin: 0;
+					list-style: none !important;
+					overflow: visible;
+
+					&:before {
+						content: '';
+						position: absolute;
+						width: 2rem;
+						left: 0; 
+						top: 1rem;
+						bottom: 0;
+						background-image: url('../../dist/images/pdf-icon.png');
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+
+					a {
+						white-space: nowrap;
+					}
+				}
+			}
+
+			&.show-pdf-links {
+				& > li { 
+
+					height: 63rem; 
+
+					@include breakpoint( $vga ) {
+						height: 60rem;
+					}
+
+				}
+
+				.pdfs {
+					display: block;
+					height: 15rem;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.products-downloader {
+		a {
+			display: inline-block;
+			padding: 10px 0;
+			font-size: 16px;
+			font-weight: bold;
+
+			div.facetwp-counts {
+				display: inline;
+			}
+		}
+	}
+
+}

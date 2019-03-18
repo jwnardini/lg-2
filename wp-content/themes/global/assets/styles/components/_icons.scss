@@ -1,0 +1,125 @@
+#our-impact .info {
+	padding: 0;
+	margin-bottom: 3rem;
+
+	@include breakpoint($iphone-six){
+		margin-bottom: 0;
+	}
+
+	i {
+
+		display: inline-block;
+	    position: relative;
+	    width: 1.4rem;
+	    height: 1.4rem;
+	    padding: 0;
+	    border: .1rem solid #015b80;
+	    border-radius: 1rem;
+		cursor: pointer;
+		font-weight: normal;
+
+	    &:before {
+	    	top: .2rem;
+    		height: .2rem;
+    		content: '';
+		    display: block;
+		    position: absolute;
+		    left: .5rem;
+		    width: .2rem;
+		    background: #015b80;
+	    }
+
+	    &:after {
+	    	top: .5rem;
+    		height: .6rem;
+    		content: '';
+		    display: block;
+		    position: absolute;
+		    left: .5rem;
+		    width: .2rem;
+		    background: #015b80;
+	    }
+
+	}
+
+	span {
+    	display: none;
+    	opacity: 0;
+
+
+	    &:after {
+    	    content: '';
+		    display: block;
+		    position: absolute;
+		    width: 2rem;
+		    height: 2rem;
+		    bottom: -1rem;
+		    background: #f5f5f5;
+		    border: 1px solid #58595b;
+		    border-width: 0 1px 1px 0;
+		    -webkit-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		    left: 2rem;
+
+		    @include breakpoint($phablet) {
+	    		// left: none;
+	    	}
+		}
+
+	}
+
+	&:hover span {
+    		display: block;
+		    bottom: 4rem;
+		    left: 0.5rem;
+		    opacity: 1;
+		    position: absolute;
+		    z-index: 100;
+		    width: auto;
+		    height: auto;
+		    padding: 1.5rem 3rem;
+		    background: #f5f5f5;
+		    color: #363636;
+		    border: 1px solid #58595b;
+		    border-radius: .3rem;
+		    font-size: 1.4rem;
+		    font-style: normal;
+		    line-height: 2.6rem;
+		    text-transform: none;
+		    -webkit-transition: opacity .3s,top .3s;
+		    transition: opacity .3s,top .3s;
+
+		    @include breakpoint($iphone-six) {
+		    	width: 32rem;
+		    }
+
+	    }
+}
+
+// flickr and youtube at the footer
+
+.social-icons {
+    .flickr, .youtube {
+        span {
+            margin-left: -9999px;
+            position:absolute;
+        }
+    }
+}
+
+.social-icons {
+	a {
+		border:2px solid #fc3;
+		border-radius:50%;
+		display:inline-block;
+		width:35px;
+		height:35px;
+		line-height:35px;
+		text-align:center;
+		margin:0 5px;
+	}
+	a i {
+		font-size:18px;
+		color:#fff;
+	}
+}

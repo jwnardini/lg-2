@@ -1,0 +1,80 @@
+.single-resource {
+
+	main.main {
+
+		float: none;
+		width: 100%;
+
+		@include breakpoint( $ipad ) {
+			max-width: 80rem;
+		}
+
+		h1.entry-title {
+			font-size: 5.4rem;
+			line-height: 6rem;
+		}
+
+		.entry-meta {
+			time {
+				font-size: 2rem;
+			}
+		}
+
+		.entry-thumbnail {
+			padding: 2rem 0;
+			width: 100%;
+
+
+			@include breakpoint( $ipad ) {
+				float: left;
+				padding: 0 2rem 2rem 0;
+				width: 40%;
+
+			}
+
+			img {
+				border: 1px solid $lgrey;
+			}
+		}
+
+		.entry-content {
+
+			width: 100%;
+
+			@include breakpoint( $ipad ) {
+				width: 55%;
+				float: left;
+			}
+
+			.taxonomy {
+				p {
+					color: $tgrey;
+					font-size: 1.6rem;
+				}
+			}
+
+			.pdfs {
+				padding: 0; margin: 3rem 0;
+				list-style: none;
+
+				li {
+					padding: 0;
+
+					.btn {
+						min-width: 20rem;
+						padding: 1rem 2rem;
+						background: $brand-yellow;
+						border-radius: 0;
+						border: none;
+						text-transform: uppercase;
+						font-weight: $font-bold;
+					}
+				}
+			}
+		}
+
+	}
+
+	
+
+}

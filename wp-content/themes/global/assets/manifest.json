@@ -1,0 +1,43 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "ie9.css": {
+      "files": [
+        "styles/ie9.scss"
+      ],
+      "main": false
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "global.js": {
+      "files": [
+        "scripts/global.js"
+      ]
+    },
+    "accessibility.js": {
+      "files": [
+        "scripts/accessibility.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": "http://lightingglobal.dev"
+  }
+}

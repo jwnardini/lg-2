@@ -1,0 +1,101 @@
+body.search em { font-weight: $font-normal; }
+
+form.search {
+	display: block; float: right;
+	width: 80%;
+	padding: 5px 0 5px 15px;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	@include breakpoint( $xga ) {
+		width: auto;
+	}
+
+	label {
+		display: none;
+	}
+	input, button {
+		display: block; position: relative; float: left;
+		height: 30px;
+		font-size: 15px;
+		border: none;
+
+		&[type='search'] {
+			width: calc( 100% - 30px );
+			max-width: 290px;
+			padding: 3px 10px;
+			border: {
+				width: 0; //1px;
+				color: $lgrey;
+				style: solid;
+				radius: 0; // 3px 0 0 3px;
+			}
+
+			@include breakpoint( $ipad ) {
+				border: {
+					width: 1px;
+					color: $lgrey;
+					style: solid;
+					radius: 3px 0 0 3px;
+				}
+			}
+		}
+
+		&[type='submit'] {
+			width: 30px;
+			text-indent: -9999px;
+
+			border: {
+				width: 0;;
+				color: $lgrey;
+				style: solid;
+				radius: 0; ;
+			}
+			background: $white;
+
+			@include breakpoint( $ipad ) {
+
+				background: $brand-yellow;
+				border: {
+					width: 1px 1px 1px 0;
+					color: $lgrey;
+					style: solid;
+					radius: 0 3px 3px 0;
+				}
+			}
+
+			// Search icon circle
+			&:before {
+				content: "";
+				display: block; position: absolute;
+				left: 6px; top: 6px;
+				width: 14px; height: 14px;
+				border: {
+					width: 3px;
+					color: $grey !important;
+					style: solid;
+					radius: 8px;
+				}
+			}
+
+			// Search icon line
+			&:after {
+				content: "";
+				display: block; position: absolute;
+				right: 8px; bottom: 5px;
+				width: 3px; height: 8px;
+				border: none;
+				background: $grey !important;
+				transform: rotate(-45deg);
+			}
+
+
+
+		}
+
+	}
+}
